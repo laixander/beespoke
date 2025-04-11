@@ -1,6 +1,6 @@
 <template>
-    <div class="bg-gradient-to-t from-primary-100 to-white dark:from-primary-950 overflow-hidden">
-        <div class="container mx-auto lg:flex items-center lg:h-[calc(100vh-60px)] gap-8">
+    <section :class="heroClass">
+        <div :class="wrapperClass">
             <div class="space-y-24 w-full py-20 px-4 order-first">
                 <div class="space-y-6">
                     <div class="font-semibold text-balance text-5xl lg:text-7xl text-gray-800 dark:text-gray-100">
@@ -49,5 +49,10 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 </template>
+
+<script setup lang="ts">
+const heroClass = 'bg-gradient-to-t from-primary-100 to-white dark:from-primary-950 overflow-hidden'
+const wrapperClass = 'container mx-auto lg:flex items-center lg:min-h-[calc(100vh-60px)] gap-8'
+</script>
