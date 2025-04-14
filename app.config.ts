@@ -7,6 +7,12 @@ export default defineAppConfig({
         },   
         horizontalNavigation: {
             label: 'font-light',
+        },
+        verticalNavigation: {
+            label: 'font-light',
+        },
+        container: {
+            constrained: 'max-w-screen-2xl'
         }   
     }
 })

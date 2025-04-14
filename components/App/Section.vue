@@ -9,5 +9,5 @@ defineProps<{
     isEven?: boolean
 }>()
 
-const sectionClass = 'p-4'
+const sectionClass = 'py-4'
 </script>

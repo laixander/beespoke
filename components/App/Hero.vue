@@ -1,7 +1,7 @@
 <template>
     <section :class="heroClass">
-        <div :class="wrapperClass">
-            <div class="space-y-24 w-full py-20 px-4 order-first">
+        <UContainer :class="wrapperClass">
+            <div class="space-y-24 w-full py-20 order-first">
                 <div class="space-y-6">
                     <div class="font-semibold text-balance text-5xl lg:text-7xl text-gray-800 dark:text-gray-100">
                         We’re
@@ -23,7 +23,7 @@
                     </UButton>
                 </div>
             </div>
-            <div class="flex justify-center lg:justify-end items-center p-4 order-last">
+            <div class="flex justify-center lg:justify-end items-center order-last">
                 <div class="flex gap-4">
                     <div class="pt-24 lg:pt-80">
                         <div class="bg-primary-200 relative w-44 h-64 rounded-lg overflow-hidden">
@@ -48,11 +48,11 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </UContainer>
     </section>
 </template>
 
 <script setup lang="ts">
 const heroClass = 'bg-gradient-to-t from-primary-100 to-white dark:from-primary-950 overflow-hidden'
-const wrapperClass = 'container mx-auto lg:flex items-center lg:min-h-[calc(100vh-60px)] gap-8'
+const wrapperClass = 'lg:flex items-center lg:min-h-[calc(100vh-60px)] gap-8 py-4 lg:py-8'
 </script>
