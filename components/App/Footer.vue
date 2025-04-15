@@ -1,6 +1,6 @@
 <template>
-    <footer class="py-4 lg:py-20">
-        <UContainer :class="wrapperClass">
+    <footer :class="footerConfig">
+        <UContainer :class="wrapperConfig">
             <div class="space-y-2 prose max-w-none">
                 <UAvatar src="/logo.png" alt="Beespoke Solutions Inc." size="2xl" />
                 <h3 class="text-primary-500 dark:text-primary-400">Beespoke Solutions Inc.</h3>
@@ -20,9 +20,10 @@
 </template>
 
 <script setup lang="ts">
-const wrapperClass = 'container mx-auto grid grid-cols-1 lg:grid-cols-3 gap-8'
+const footerConfig = 'py-4 lg:py-20 bg-gradient-to-t from-primary-100 to-white dark:from-primary-950'
+const wrapperConfig = 'container mx-auto grid grid-cols-1 lg:grid-cols-3 gap-8'
 const uiNavConfig = {
-    wrapper: 'border-s border-gray-200 dark:border-gray-800',
+    wrapper: 'border-s border-gray-200 dark:border-white/5',
     base: 'group block border-s -ms-px leading-6 before:hidden',
     padding: 'p-0 ps-4',
     rounded: '',

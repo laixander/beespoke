@@ -1,12 +1,7 @@
 <template>
     <AppHero />
-    <AppSection isEven>
-        <UContainer class="py-4 lg:py-20 space-y-16 lg:space-y-20">
-            <FancyHeading title="Welcome to Beespoke Solutions Inc." highlight="Beespoke" align="center" />
-            <div class="grid grid-cols-1 lg:grid-cols-[320px_320px_320px] gap-8 lg:gap-24 justify-center">
-                <Feature v-for="(badge, index) in badges" :key="index" v-bind="badge" align="center" />
-            </div>
-        </UContainer>
+    <AppSection>
+        <AppHighlight />
     </AppSection>
     <AppSection>
         <UContainer class="grid grid-cols-1 lg:grid-cols-2 gap-12 py-4 lg:py-20">
@@ -20,7 +15,7 @@
             />
         </UContainer>
     </AppSection>
-    <AppSection isEven>
+    <AppSection>
         <UContainer class="py-4 lg:py-20 space-y-16">
             <div class="lg:max-w-3xl">
                 <Article
@@ -31,7 +26,7 @@
                     :paragraphs="item.paragraphs"
                 />
             </div>
-            <div class="grid lg:grid-cols-3 gap-y-10 gap-x-20">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-y-10 gap-x-20">
                 <Feature v-for="(feature, index) in features" :key="index" v-bind="feature" />
             </div>
         </UContainer>
@@ -39,24 +34,6 @@
 </template>
 
 <script setup lang="ts">
-const badges = [
-    {
-        img: '/badge.svg',
-        imgSize: '3xl',
-        description: '**First Full IT Outsourcing Project of the Government** of the Philippines.'
-    },
-    {
-        img: '/badge.svg',
-        imgSize: '3xl',
-        description: '**First Chatbot of the Banking Industry** in the Philippines.'
-    },
-    {
-        img: '/badge.svg',
-        imgSize: '3xl',
-        description: '**First Managed Service Provider of Kaspersky Lab** in the Philippines.'
-    }
-]
-
 const features = [
     {
         icon: 'i-lucide-iteration-ccw',

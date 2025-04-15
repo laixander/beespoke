@@ -1,6 +1,6 @@
 <template>
-    <section :class="heroClass">
-        <UContainer :class="wrapperClass">
+    <section :class="heroConfig">
+        <UContainer :class="wrapperConfig">
             <div class="space-y-24 w-full py-20 order-first">
                 <div class="space-y-6">
                     <div class="font-semibold text-balance text-5xl lg:text-7xl text-gray-800 dark:text-gray-100">
@@ -53,6 +53,6 @@
 </template>
 
 <script setup lang="ts">
-const heroClass = 'bg-gradient-to-t from-primary-100 to-white dark:from-primary-950 overflow-hidden'
-const wrapperClass = 'lg:flex items-center lg:min-h-[calc(100vh-60px)] gap-8 py-4 lg:py-8'
+const heroConfig = 'bg-gradient-to-t from-primary-100 to-white dark:from-primary-950 overflow-hidden'
+const wrapperConfig = 'lg:flex items-center lg:min-h-[calc(100vh-60px)] gap-8 py-4 lg:py-8'
 </script>
