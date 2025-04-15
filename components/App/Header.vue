@@ -65,6 +65,7 @@ const isClick = () => {
 }
 
 onMounted(() => {
+  handleScroll() // ← ensure the scroll state is set on initial load
   window.addEventListener('scroll', handleScroll, { passive: true })
   window.addEventListener('resize', handleResize)
 })
