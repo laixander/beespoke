@@ -1,7 +1,8 @@
 <template>
-    <article class="prose max-w-none has-[p]:font-light has-[p]:text-gray-500 has-[p]:dark:text-gray-400 has-[p]:text-pretty">
-        <FancyHeading v-if="title && highlight" :title="title" :highlight="highlight" />
-        <p v-for="(p, i) in parsedParagraphs" :key="i">
+    <article class="prose max-w-none">
+        <FancyHeading v-if="title" :title="title" :highlight="highlight" :size="size" />
+        <FancyDivider v-if="hasDivider" />
+        <p v-for="(p, i) in parsedParagraphs" :key="i" class="font-light text-gray-500 dark:text-gray-400 text-pretty">
             <template v-for="(chunk, j) in p" :key="j">
                 <template v-if="typeof chunk === 'string'">
                     {{ chunk }}
@@ -41,11 +42,18 @@ type Chunk =
     | { link: { text: string; href: string } }
     | { code: string }
 
-const props = defineProps<{
-    title?: string
-    highlight?: string
-    paragraphs?: string[]
-}>()
+const props = withDefaults(
+    defineProps<{
+        title?: string
+        highlight?: string
+        size?: string
+        hasDivider?: boolean
+        paragraphs?: string[]
+    }>(),
+    {
+        hasDivider: false,
+    }
+)
 
 function parseParagraph(paragraph: string): Chunk[] {
     const chunks: Chunk[] = []

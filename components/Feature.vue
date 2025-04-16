@@ -2,10 +2,10 @@
     <div :class="['flex flex-col items-start gap-4 lg:gap-6', alignmentClass]">
         <FancyIcon :icon="icon" :img="img" :imgAlt="imgAlt" :imgSize="imgSize" />
         <div :class="['prose max-w-none mb-auto', alignmentClass]">
-            <h4 v-if="title" class="font-semibold text-xl text-gray-800 dark:text-gray-100">
+            <h4 v-if="title" :class="titleClass">
                 {{ title }}
             </h4>
-            <p v-if="description" class="font-light text-gray-500 dark:text-gray-400 text-pretty">
+            <p v-if="description" :class="descriptionClass">
                 <template v-for="(chunk, i) in parsedDescription" :key="i">
                     <template v-if="typeof chunk === 'string'">
                         {{ chunk }}
@@ -38,7 +38,10 @@ const props = defineProps<{
     imgAlt?: string
     imgSize?: string
     title?: string
+    titleColor?: string // e.g., 'text-gray-800'
+    titleSize?: string // e.g., 'text-xl'
     description?: string
+    descriptionSize?: string
     button?: string
     align?: 'left' | 'center' | 'right'
 }>()
@@ -46,6 +49,14 @@ const props = defineProps<{
 defineEmits<{
   (e: 'cta'): void
 }>()
+
+const titleClass = computed(() => {
+  return `${props.titleSize ?? 'text-xl'} ${props.titleColor ?? 'text-gray-800 dark:text-gray-100'} font-semibold`
+})
+
+const descriptionClass = computed(() => {
+  return `${props.descriptionSize ?? 'text-base'} font-light text-gray-500 dark:text-gray-400 text-pretty`
+})
 
 const alignmentClass = computed(() => {
   switch (props.align) {
