@@ -1,12 +1,12 @@
 <template>
-    <AppSection>
+    <AppBanner>
         <UContainer class="py-4 lg:py-20">
             <div class="lg:max-w-3xl">
                 <Article v-for="(item, index) in banner" :key="index" :title="item.title" :highlight="item.highlight"
                     :paragraphs="item.paragraphs" />
             </div>
         </UContainer>
-    </AppSection>
+    </AppBanner>
     <AppSection>
         <UContainer class="py-4 lg:py-20 space-y-20">
             <div class="grid grid-cols-1 lg:grid-cols-4 gap-y-10 gap-x-20">

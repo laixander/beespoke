@@ -1,5 +1,5 @@
 <template>
-    <AppSection>
+    <AppBanner>
         <UContainer class="py-4 lg:py-20">
             <div class="lg:max-w-3xl">
                 <Article
@@ -11,7 +11,7 @@
                 />
             </div>
         </UContainer>
-    </AppSection>
+    </AppBanner>
     <AppSection>
         <UContainer class="py-4 lg:py-20">
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-y-10 gap-x-20">

@@ -10,7 +10,7 @@ import { ref, onMounted } from 'vue'
 const sectionRef = ref<HTMLElement | null>(null)
 const isEven = ref(false)
 
-const baseClass = 'py-4 transition-colors duration-300'
+const baseClass = 'transition-colors duration-300'
 const evenBg = 'bg-gray-50 dark:bg-gray-900'
 
 onMounted(() => {
