@@ -9,28 +9,31 @@
     </AppBanner>
     <AppSection>
         <UContainer class="py-4 lg:py-20 space-y-20">
-            <div class="grid grid-cols-1 lg:grid-cols-4 gap-y-10 gap-x-20">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
                 <Feature 
                     v-for="(feature, index) in items" 
                     :key="index" 
                     v-bind="feature"
+                    unstyled
+                    iconSize="w-14 h-14"
                 />
             </div>
 
-            <div class="dark:bg-gray-900 p-20 space-y-20">
+            <div>
                 <FancyHeading 
                     title="Why Choose Our Technology Stack?"
-                    highlight="Our Technology"
                     align="center"
+                    size="text-3xl"
                 />
-
-                <div class="grid grid-cols-1 lg:grid-cols-3 gap-y-10 gap-x-20">
-                    <Feature 
-                        v-for="(feature, index) in reasons" 
-                        :key="index" 
-                        v-bind="feature"
-                        align="center"
-                    />
+                <FancyDivider align="center" class="mb-10" />
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
+                    <UCard v-for="(feature, index) in reasons" 
+                    :key="index" >
+                        <Feature 
+                            v-bind="feature"
+                            align="center"
+                        />
+                    </UCard>
                 </div>
             </div>
         </UContainer>

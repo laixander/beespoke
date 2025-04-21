@@ -10,32 +10,32 @@ export const banner = [
 
 export const items = [
     {
-        icon: 'i-lucide-iteration-ccw',
+        icon: 'i-lucide-headset',
         title: 'Technology Consulting',
         description: 'We provide strategic IT consulting to help businesses modernize infrastructure, manage risks, and drive innovation. Our experts guide you in building a scalable, secure, and future-ready tech environment.'
     },
     {
-        icon: 'i-lucide-git-compare-arrows',
+        icon: 'i-lucide-cpu',
         title: 'Application Development',
         description: 'We design and develop custom applications that streamline operations, enhance user experiences, and support your business goals across digital platforms.'
     },
     {
-        icon: 'i-lucide-users',
+        icon: 'i-lucide-search-code',
         title: 'QA And Testing',
         description: 'Our QA team ensures your software meets high standards of quality and performance—minimizing bugs, reducing risk, and securing system stability.'
     },
     {
-        icon: 'i-lucide-iteration-ccw',
+        icon: 'i-lucide-tablet-smartphone',
         title: 'Mobile Application Development',
         description: 'We build responsive, user-focused mobile apps that increase customer engagement, extend your brand reach, and support on-the-go access.'
     },
     {
-        icon: 'i-lucide-git-compare-arrows',
+        icon: 'i-lucide-infinity',
         title: 'DevSecOps',
         description: 'We integrate development, operations, and security into one agile workflow—enabling faster releases without compromising protection.'
     },
     {
-        icon: 'i-lucide-users',
+        icon: 'i-lucide-settings',
         title: 'System Integration',
         description: 'We connect your systems, data, and applications to improve process efficiency, enable seamless communication, and enhance overall business performance.'
     }

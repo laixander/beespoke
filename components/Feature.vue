@@ -1,7 +1,8 @@
 <template>
     <div :class="['flex flex-col items-start gap-4 lg:gap-6', alignmentClass]">
-        <FancyIcon :icon="icon" :img="img" :imgAlt="imgAlt" :imgSize="imgSize" />
-        <div :class="['prose max-w-none mb-auto', alignmentClass]">
+        <FancyIcon :icon="icon" :img="img" :imgAlt="imgAlt" :imgSize="imgSize" :iconStyle="iconStyle"
+            :unstyled="unstyled" :iconColor="iconColor" :iconSize="iconSize" />
+        <div :class="['mb-auto', alignmentClass]">
             <h4 v-if="title" :class="titleClass">
                 {{ title }}
             </h4>
@@ -34,6 +35,10 @@ import { computed } from 'vue'
 
 const props = defineProps<{
     icon?: string
+    iconColor?: string
+    iconSize?: string
+    iconStyle?: string
+    unstyled?: boolean
     img?: string
     imgAlt?: string
     imgSize?: string
@@ -47,59 +52,59 @@ const props = defineProps<{
 }>()
 
 defineEmits<{
-  (e: 'cta'): void
+    (e: 'cta'): void
 }>()
 
 const titleClass = computed(() => {
-  return `${props.titleSize ?? 'text-xl'} ${props.titleColor ?? 'text-gray-800 dark:text-gray-100'} font-semibold`
+    return `${props.titleSize ?? 'text-xl'} ${props.titleColor ?? 'text-gray-800 dark:text-gray-100'} font-semibold mb-3`
 })
 
 const descriptionClass = computed(() => {
-  return `${props.descriptionSize ?? 'text-base'} font-light text-gray-500 dark:text-gray-400 text-pretty`
+    return `${props.descriptionSize ?? 'text-base'} font-light text-gray-500 dark:text-gray-400 text-pretty leading-7`
 })
 
 const alignmentClass = computed(() => {
-  switch (props.align) {
-    case 'center':
-      return 'items-center text-center'
-    case 'right':
-      return 'items-end text-right'
-    default:
-      return 'items-start text-left'
-  }
+    switch (props.align) {
+        case 'center':
+            return 'items-center text-center'
+        case 'right':
+            return 'items-end text-right'
+        default:
+            return 'items-start text-left'
+    }
 })
 
 // Markdown-style parser for description string
 const parsedDescription = computed(() => {
-  if (!props.description) return []
+    if (!props.description) return []
 
-  const str = props.description
+    const str = props.description
 
-  const tokens: (string | { bold?: string; italic?: string; link?: { text: string; href: string } })[] = []
+    const tokens: (string | { bold?: string; italic?: string; link?: { text: string; href: string } })[] = []
 
-  const pattern =
-    /(\*\*(.*?)\*\*)|(_(.*?)_)|(`(.*?)`)|(\[(.*?)\]\((.*?)\))/g
+    const pattern =
+        /(\*\*(.*?)\*\*)|(_(.*?)_)|(`(.*?)`)|(\[(.*?)\]\((.*?)\))/g
 
-  let lastIndex = 0
-  let match
+    let lastIndex = 0
+    let match
 
-  while ((match = pattern.exec(str)) !== null) {
-    if (match.index > lastIndex) {
-      tokens.push(str.slice(lastIndex, match.index))
+    while ((match = pattern.exec(str)) !== null) {
+        if (match.index > lastIndex) {
+            tokens.push(str.slice(lastIndex, match.index))
+        }
+
+        if (match[1]) tokens.push({ bold: match[2] }) // **bold**
+        else if (match[3]) tokens.push({ italic: match[4] }) // _italic_
+        else if (match[5]) tokens.push({ italic: match[6] }) // `italic`
+        else if (match[7]) tokens.push({ link: { text: match[8], href: match[9] } }) // [text](url)
+
+        lastIndex = pattern.lastIndex
     }
 
-    if (match[1]) tokens.push({ bold: match[2] }) // **bold**
-    else if (match[3]) tokens.push({ italic: match[4] }) // _italic_
-    else if (match[5]) tokens.push({ italic: match[6] }) // `italic`
-    else if (match[7]) tokens.push({ link: { text: match[8], href: match[9] } }) // [text](url)
+    if (lastIndex < str.length) {
+        tokens.push(str.slice(lastIndex))
+    }
 
-    lastIndex = pattern.lastIndex
-  }
-
-  if (lastIndex < str.length) {
-    tokens.push(str.slice(lastIndex))
-  }
-
-  return tokens
+    return tokens
 })
 </script>

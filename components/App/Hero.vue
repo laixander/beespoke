@@ -15,7 +15,7 @@
                     </div>
                 </div>
                 <div class="flex gap-2">
-                    <UButton label="Talk to our expert" size="xl" :ui="{ rounded: 'rounded-full', padding: { xl: 'px-6' } }" />
+                    <UButton label="Talk to our expert" size="xl" color="black" :ui="{ rounded: 'rounded-full', padding: { xl: 'px-6' } }" />
                     <UButton label="Checkout our products" variant="ghost" size="xl" :ui="{ rounded: 'rounded-full', padding: { xl: 'px-6' } }">
                         <template #trailing>
                             <UIcon name="i-heroicons-arrow-right-20-solid" class="w-5 h-5" />

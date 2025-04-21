@@ -26,7 +26,7 @@
                     :paragraphs="item.paragraphs"
                 />
             </div>
-            <div class="grid grid-cols-1 lg:grid-cols-3 gap-y-10 gap-x-20">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-10 lg:gap-20">
                 <Feature v-for="(feature, index) in items" :key="index" v-bind="feature" />
             </div>
         </UContainer>

@@ -1,13 +1,13 @@
 <template>
     <h3 v-if="title" :class="[
-        'font-semibold text-gray-800 dark:text-gray-100 lg:mb-8',
+        'font-semibold text-gray-800 dark:text-gray-100 lg:mb-6',
         sizeClass,
         alignClass
     ]">
         <template v-if="hasHighlight">
             <span v-if="before">{{ before }}</span>
             <span
-                class="before:block before:absolute before:-inset-1 before:-skew-y-3 before:bg-primary-500 relative inline-block mx-1 highlight-animate">
+                class="before:block before:absolute before:-inset-1 before:-skew-y-3 before:bg-primary-500 relative inline-block mx-1">
                 <span class="relative text-white">{{ highlight }}</span>
             </span>
             <span v-if="after">{{ after }}</span>
