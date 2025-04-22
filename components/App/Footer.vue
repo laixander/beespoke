@@ -1,11 +1,14 @@
 <template>
     <footer :class="footerConfig">
         <UContainer :ui="uiContainerConfig">
-            <Feature
-                v-for="(feature, index) in brand" 
-                :key="index" 
-                v-bind="feature"
-            />
+            <div class="space-y-4">
+                <BeespokeLogo class="w-14 h-14" />
+                <Feature
+                    v-for="(feature, index) in brand" 
+                    :key="index" 
+                    v-bind="feature"
+                />
+            </div>
             <List :items="detailList" />
             <div class="space-y-2">
                 <h4 class="font-medium text-gray-800 dark:text-gray-100">

@@ -1,6 +1,6 @@
 export const brand = [
     {
-        img: '/logo.png',
+        // img: '/logo.png',
         title: 'Beespoke Solutions Inc.',
         titleSize: 'text-xl',
         titleColor: 'text-primary-500',

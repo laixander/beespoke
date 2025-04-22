@@ -31,5 +31,5 @@
 </template>
 
 <script setup lang="ts">
-import { banner, items } from '@/data/products'
+import { banner, items } from '@/data/solutions'
 </script>

@@ -1,8 +1,9 @@
 <template>
     <header :class="[baseClass, { 'bg-white/80 backdrop-blur dark:bg-gray-900/80': isScrolled }]">
         <div class="w-full flex items-center gap-2">
-            <UAvatar src="/logo.png" alt="Beespoke Solutions Inc." size="md" />
-            <span class="text-primary-500 dark:text-primary-400">
+            <BeespokeLogo class="w-10 h-10" />
+            <!-- <UAvatar src="/logo.png" alt="Beespoke Solutions Inc." size="md" /> -->
+            <span class="text-primary-500 dark:text-primary-400 hidden xl:inline">
                 Beespoke Solutions Inc.
             </span>
         </div>
@@ -19,8 +20,11 @@
                 />
             </div>
 
+            <div class="w-[1px] h-8 bg-gray-100 dark:bg-gray-800 mx-4 hidden lg:block"></div>
             <!-- Dark Mode Toggle (Always visible) -->
             <ColorMode />
+
+            <div class="w-[1px] h-8 bg-gray-100 dark:bg-gray-800 mx-4 lg:hidden"></div>
 
             <!-- Mobile Menu Button -->
             <div class="lg:hidden">
@@ -44,6 +48,7 @@
 
 <script setup lang="ts">
 import { ref, onMounted, onUnmounted } from 'vue'
+import BeespokeLogo from '../BeespokeLogo.vue'
 
 const isOpen = ref(false)
 const isScrolled = ref(false)
@@ -115,12 +120,12 @@ const links = [
         to: '/services'
     },
     {
-        label: 'Products',
+        label: 'Solutions',
         icon: 'i-heroicons-cube',
-        to: '/products'
+        to: '/solutions'
     },
     {
-        label: 'technologies',
+        label: 'Technologies',
         icon: 'i-heroicons-cpu-chip',
         to: '/technologies'
     },
