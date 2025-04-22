@@ -10,15 +10,10 @@
     <AppSection>
         <!-- <UnderConstruction /> -->
          <UContainer class="py-4 lg:py-20 space-y-20">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-8">
-                <UCard>
-                    <ContactForm />
-                </UCard>
-                
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-10">
+                <ContactForm />
                 <Map />
             </div>
-
-            
          </UContainer>
     </AppSection>
     <AppSection>

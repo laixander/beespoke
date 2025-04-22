@@ -13,18 +13,26 @@
         </UContainer>
     </AppBanner>
     <AppSection>
-        <UContainer class="py-4 lg:py-20">
-            <div class="grid grid-cols-1 lg:grid-cols-3 gap-y-10 gap-x-20">
-                <Feature 
-                    v-for="(feature, index) in items" 
-                    :key="index" 
-                    v-bind="feature"
-                />
-            </div>
+        <UContainer class="grid grid-cols-1 lg:grid-cols-3 gap-y-10 gap-x-20 py-4 lg:py-20">
+            <Feature 
+                v-for="(feature, index) in items" 
+                :key="index" 
+                v-bind="feature"
+            />
         </UContainer>
     </AppSection>
     <AppSection>
-        <AppHighlights />
+        <UContainer class="text-center py-4 lg:py-20">
+            <FancyHeading 
+                title="Ready to elevate your digital capabilities?"
+                size="text-3xl"
+            />
+            <FancyDivider align="center" class="mb-10" />
+            <p class="prose mx-auto dark:text-gray-400 mb-8">
+                Let our expert team help you transform your organization with cutting-edge technology solutions tailored to your needs.
+            </p>
+            <UButton label="Schedule a Consultation" size="xl" :ui="{ rounded: 'rounded-full', padding: { xl: 'px-6' } }" />
+        </UContainer>
     </AppSection>
 </template>
 

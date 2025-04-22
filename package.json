@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@nuxt/ui": "^2.21.1",
+    "marked": "^15.0.9",
     "nuxt": "^3.16.2",
     "vue": "^3.5.13",
     "vue-router": "^4.5.0",
@@ -19,6 +20,7 @@
   "devDependencies": {
     "@iconify-json/logos": "^1.2.4",
     "@iconify-json/lucide": "^1.2.37",
-    "@iconify-json/ri": "^1.2.5"
+    "@iconify-json/ri": "^1.2.5",
+    "@types/marked": "^6.0.0"
   }
 }
