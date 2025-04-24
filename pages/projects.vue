@@ -8,7 +8,7 @@
         </UContainer>
     </AppBanner>
     <AppSection>
-        <UnderConstruction />
+        <ComingSoon />
     </AppSection>
     <AppSection>
         <AppHighlights />

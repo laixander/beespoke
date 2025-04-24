@@ -30,7 +30,7 @@
                 <UCard 
                     v-for="(feature, index) in reasons" 
                     :key="index" 
-                    :ui="{background: 'dark:bg-gray-950'}"
+                    :ui="{background: 'dark:bg-gray-950/30'}"
                 >
                     <Feature 
                         v-bind="feature"
