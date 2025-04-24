@@ -18,6 +18,7 @@
                 v-for="(feature, index) in items" 
                 :key="index" 
                 v-bind="feature"
+                :class="index === items.length - 1 ? 'lg:col-start-2' : ''"
             />
         </UContainer>
     </AppSection>

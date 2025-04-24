@@ -15,22 +15,29 @@ export const detailList = [
     { icon: 'i-lucide-phone', title: 'Give us a ring', description: '(632) 8538-5056' },
 ]
 
-export const links = [{
-    label: 'Home',
-    to: '/'
-}, {
-    label: 'Services',
-    to: '/services'
-}, {
-    label: 'Products',
-    to: '/products'
-}, {
-    label: 'technologies',
-    to: '/technologies'
-}, {
-    label: 'Projects',
-    to: '/projects'
-}, {
-    label: 'Contact',
-    to: '/contact'
-}]
+export const links = [
+    {
+        label: 'Home',
+        to: '/'
+    }, 
+    {
+        label: 'Services',
+        to: '/services'
+    }, 
+    {
+        label: 'Products',
+        to: '/products'
+    }, 
+    {
+        label: 'Technologies',
+        to: '/technologies'
+    }, 
+    // {
+    //     label: 'Projects',
+    //     to: '/projects'
+    // },
+    {
+        label: 'Contact',
+        to: '/contact'
+    }
+]

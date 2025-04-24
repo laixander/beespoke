@@ -38,5 +38,10 @@ export const items = [
         icon: 'i-lucide-settings',
         title: 'System Integration',
         description: 'We connect your systems, data, and applications to improve process efficiency, enable seamless communication, and enhance overall business performance.'
-    }
+    },
+    {
+        icon: 'i-lucide-brain',
+        title: 'AI & Intelligent Automation',
+        description: 'We integrate machine learning and generative AI to optimize workflows, generate insights, and deploy smart chatbots—delivering faster, data‑driven results across your business.'
+    },
 ]
