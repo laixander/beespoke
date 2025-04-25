@@ -1,6 +1,6 @@
 <template>
     <AppBanner>
-        <UContainer class="py-4 lg:py-20">
+        <UContainer class="py-10 lg:py-20">
             <div class="lg:max-w-3xl">
                 <Article v-for="(item, index) in banner" :key="index" :title="item.title" :highlight="item.highlight"
                     :paragraphs="item.paragraphs" />
@@ -8,7 +8,7 @@
         </UContainer>
     </AppBanner>
     <AppSection>
-        <UContainer class="grid grid-cols-1 lg:grid-cols-3 gap-10 py-4 lg:py-20">
+        <UContainer class="grid grid-cols-1 lg:grid-cols-3 gap-10 py-10 lg:py-20">
             <Feature 
                 v-for="(feature, index) in items" 
                 :key="index" 
@@ -19,14 +19,14 @@
         </UContainer>
     </AppSection>
     <AppSection>
-        <UContainer class="text-center py-4 lg:py-20">
+        <UContainer class="text-center py-10 lg:py-20">
             <FancyHeading 
                 title="Why Choose Our Technology Stack?"
                 align="center"
                 size="text-3xl"
             />
-            <FancyDivider align="center" class="mb-10" />
-            <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
+            <FancyDivider align="center" />
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-10">
                 <UCard 
                     v-for="(feature, index) in reasons" 
                     :key="index" 

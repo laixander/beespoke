@@ -1,8 +1,8 @@
 <template>
-    <article class="prose max-w-none">
+    <article>
         <FancyHeading v-if="title" :title="title" :highlight="highlight" :size="size" />
         <FancyDivider v-if="hasDivider" />
-        <p v-for="(p, i) in parsedParagraphs" :key="i" class="font-light text-gray-500 dark:text-gray-400 text-pretty">
+        <p v-for="(p, i) in parsedParagraphs" :key="i" class="font-light text-gray-500 dark:text-gray-400 text-pretty mb-4 last:mb-0 lg:leading-7">
             <template v-for="(chunk, j) in p" :key="j">
                 <template v-if="typeof chunk === 'string'">
                     {{ chunk }}

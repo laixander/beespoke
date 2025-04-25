@@ -3,7 +3,7 @@
         <UContainer :class="wrapperConfig">
             <div class="space-y-24 w-full py-20 order-first">
                 <div class="space-y-6">
-                    <div class="font-semibold text-balance text-5xl lg:text-7xl text-gray-800 dark:text-gray-100">
+                    <div class="font-bold text-balance text-5xl lg:text-7xl text-gray-800 dark:text-gray-100">
                         We’re
                         <span class="before:block before:absolute before:-inset-1 before:-skew-y-3 before:bg-primary-500 relative inline-block">
                             <span class="relative text-white">Enablers</span>
@@ -14,7 +14,7 @@
                         We Deliver Simple, Modern and Sustainable Digital Experiences.
                     </div>
                 </div>
-                <div class="flex gap-2">
+                <div class="lg:flex gap-2">
                     <UButton label="Talk to our expert" size="xl" color="black" :ui="{ rounded: 'rounded-full', padding: { xl: 'px-6' } }" />
                     <UButton label="Checkout our products" variant="ghost" size="xl" :ui="{ rounded: 'rounded-full', padding: { xl: 'px-6' } }">
                         <template #trailing>

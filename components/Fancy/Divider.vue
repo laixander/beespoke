@@ -1,5 +1,5 @@
 <template>
-    <div :class="['w-full flex', alignmentClass]">
+    <div :class="['w-full flex my-6 lg:my-8', alignmentClass]">
         <span class="w-20 h-1 bg-primary-500 rounded-full inline-block"></span>
     </div>
 </template>

@@ -1,11 +1,11 @@
 <template>
-    <div :class="['flex flex-col items-start gap-4 lg:gap-6', alignmentClass]">
+    <div :class="['flex flex-col items-start gap-2 lg:gap-4 lg:gap-6', alignmentClass]">
         <FancyIcon :icon="icon" :img="img" :imgAlt="imgAlt" :imgSize="imgSize" :iconStyle="iconStyle"
             :unstyled="unstyled" :iconColor="iconColor" :iconSize="iconSize" />
         <div :class="['mb-auto', alignmentClass]">
-            <h4 v-if="title" :class="titleClass">
+            <h3 v-if="title" :class="titleClass">
                 {{ title }}
-            </h4>
+            </h3>
             <p v-if="description" :class="descriptionClass">
                 <template v-for="(chunk, i) in parsedDescription" :key="i">
                     <template v-if="typeof chunk === 'string'">
@@ -56,11 +56,11 @@ defineEmits<{
 }>()
 
 const titleClass = computed(() => {
-    return `${props.titleSize ?? 'text-xl'} ${props.titleColor ?? 'text-gray-800 dark:text-gray-100'} font-semibold mb-3`
+    return `${props.titleSize ?? 'lg:text-xl'} ${props.titleColor ?? 'text-gray-800 dark:text-gray-100'} font-bold mb-1.5 lg:mb-3`
 })
 
 const descriptionClass = computed(() => {
-    return `${props.descriptionSize ?? 'text-base'} font-light text-gray-500 dark:text-gray-400 text-pretty leading-7`
+    return `${props.descriptionSize ?? 'text-base'} font-light text-gray-500 dark:text-gray-400 text-pretty lg:leading-7`
 })
 
 const alignmentClass = computed(() => {

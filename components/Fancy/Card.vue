@@ -1,13 +1,13 @@
 <template>
     <UCard :ui="{
         base: 'overflow-hidden',
-        header: { base: `flex items-center gap-4 ${headerAlign}`, background: headerBackground },
+        header: { base: `flex items-center gap-4 ${headerAlign}`, background: headerBackground, padding: 'px-4 py-2 sm:px-6 sm:py-4' },
         footer: { base: 'border-none' }
     }">
         <template #header>
             <FancyIcon v-if="icon || img" :icon="icon" :img="img" :imgAlt="imgAlt" :iconStyle="iconStyle"
                 :iconColor="iconColor" :iconSize="iconSize" />
-            <h3 class="font-semibold leading-6 text-lg text-gray-800 dark:text-gray-100">
+            <h3 class="font-bold leading-tight lg:leading-snug lg:text-lg text-gray-800 dark:text-gray-100">
                 {{ title }}
             </h3>
         </template>
