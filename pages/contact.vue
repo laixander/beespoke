@@ -11,9 +11,27 @@
         <!-- <UnderConstruction /> -->
          <UContainer class="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-10 py-10 lg:py-20">
                 <ContactForm />
-                <Map />
+                <div class="grid gap-6 *:rounded-xl *:p-6 *:flex *:flex-col *:justify-center">
+                    <div class="bg-primary-50">
+                        <FancyHeading title="Contact Information" size="text-xl" margin="mb-6" />
+                        <ul class="space-y-1.5">
+                            <li><UButton label="(632) 8538-5056" icon="i-lucide-phone" variant="link" size="xl" :padded="false" /></li>
+                            <li><UButton label="admin@beespokedev.com" icon="i-lucide-mail" variant="link" size="xl" :padded="false" /></li>
+                            <li><UButton label="Live Chat Available" icon="i-lucide-message-square" variant="link" size="xl" :padded="false" /></li>
+                        </ul>
+                    </div>
+                    <div class="bg-gray-50">
+                        <FancyHeading title="Office Hours" size="text-xl" margin="mb-4" />
+                        <ul class="text-gray-500 dark:text-gray-100 space-y-1">
+                            <li>Monday - Friday: 8:00 AM - 5:00 PM</li>
+                            <li>Saturday: 8:00 AM - 12:00 PM</li>
+                            <li>Sunday: Closed</li>
+                        </ul>
+                    </div>
+                </div>
          </UContainer>
     </AppSection>
+    <Map />
     <AppSection>
         <AppHighlights />
     </AppSection>
@@ -21,7 +39,6 @@
 
 <script setup lang="ts">
 import { banner } from '@/data/contact'
-import ContactForm from '~/components/ContactForm.vue';
 
 const state = reactive({
 //...

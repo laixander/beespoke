@@ -1,8 +1,9 @@
 <template>
     <h2 v-if="title" :class="[
-        'font-bold text-gray-800 dark:text-gray-100 mb-6 lg:mb-8',
+        'font-bold text-gray-800 dark:text-gray-100',
         sizeClass,
-        alignClass
+        alignClass,
+        marginClass
     ]">
         <template v-if="hasHighlight">
             <span v-if="before">{{ before }}</span>
@@ -26,6 +27,7 @@ const props = defineProps<{
     highlight?: string
     align?: 'left' | 'center' | 'right'
     size?: string // Accept custom Tailwind size classes like 'text-3xl', 'text-5xl', etc.
+    margin?: string
 }>()
 
 const hasHighlight = computed(() => {
@@ -56,6 +58,7 @@ const alignClass = computed(() => {
 })
 
 const sizeClass = computed(() => props.size ?? 'text-2xl lg:text-4xl')
+const marginClass = computed(() => props.margin ?? 'mb-6 lg:mb-8')
 </script>
 
 <style scoped>

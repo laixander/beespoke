@@ -1,7 +1,7 @@
 <template>
-    <div :class="['relative w-full pb-[56.25%] rounded-lg overflow-hidden', { 'shadow-lg': !isLoading }]">
+    <div :class="['relative w-full pb-[56.25%] lg:pb-[26.25%] overflow-hidden', { 'shadow-none': !isLoading }]">
         <!-- Loading Spinner -->
-        <div v-if="isLoading" class="absolute inset-0 flex items-center justify-center bg-white dark:bg-gray-900 z-10">
+        <div v-if="isLoading" class="absolute inset-0 flex items-center justify-center bg-primary-200 dark:bg-primary-950 z-10">
             <Loader />
         </div>
 

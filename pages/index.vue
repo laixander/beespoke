@@ -4,8 +4,10 @@
         <AppHighlights />
     </AppSection>
     <AppSection>
-        <UContainer class="grid grid-cols-1 lg:grid-cols-2 gap-12 py-4 lg:py-20">
-            <div class="bg-gray-100 dark:bg-gray-800 rounded-xl min-h-80"></div>
+        <UContainer class="grid grid-cols-1 lg:grid-cols-2 gap-12 py-10 lg:py-20 items-center">
+            <div class="bg-primary-100 dark:bg-primary-950 rounded-xl h-full overflow-hidden">
+                <img src="/photo-building.jpg" alt="Beespoke's Office" />
+            </div>
             <Article
                 v-for="(item, index) in about"
                 :key="index"
