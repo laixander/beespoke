@@ -26,23 +26,23 @@
             <div class="flex justify-center lg:justify-end items-center order-last">
                 <div class="flex gap-4">
                     <div class="pt-24 lg:pt-80">
-                        <div class="bg-primary-200 relative w-44 h-64 rounded-lg overflow-hidden">
+                        <div class="bg-primary-200 dark:bg-primary-950 relative w-44 h-64 rounded-lg overflow-hidden">
                             <img src="/photo-01.jpg" alt="" class="absolute object-cover w-full h-full">
                         </div>
                     </div>
                     <div class="space-y-5 pt-8 lg:pt-36">
-                        <div class="bg-primary-200 relative w-44 h-64 rounded-lg overflow-hidden">
+                        <div class="bg-primary-200 dark:bg-primary-950 relative w-44 h-64 rounded-lg overflow-hidden">
                             <img src="/photo-02.jpg" alt="" class="absolute object-cover w-full h-full">
                         </div>
-                        <div class="bg-primary-200 relative w-44 h-64 rounded-lg overflow-hidden">
+                        <div class="bg-primary-200 dark:bg-primary-950 relative w-44 h-64 rounded-lg overflow-hidden">
                             <img src="/photo-03.jpg" alt="" class="absolute object-cover w-full h-full">
                         </div>
                     </div>
                     <div class="space-y-5 gap-4 lg:pb-36">
-                        <div class="bg-primary-200 relative w-44 h-64 rounded-lg overflow-hidden">
+                        <div class="bg-primary-200 dark:bg-primary-950 relative w-44 h-64 rounded-lg overflow-hidden">
                             <img src="/photo-04.jpg" alt="" class="absolute object-cover object-left w-full h-full">
                         </div>
-                        <div class="bg-primary-200 relative w-44 h-64 rounded-lg overflow-hidden">
+                        <div class="bg-primary-200 dark:bg-primary-950 relative w-44 h-64 rounded-lg overflow-hidden">
                             <img src="/photo-05.jpg" alt="" class="absolute object-cover w-full h-full">
                         </div>
                     </div>

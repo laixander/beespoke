@@ -8,29 +8,33 @@
         </UContainer>
     </AppBanner>
     <AppSection>
-        <UContainer class="grid grid-cols-1 lg:grid-cols-3 gap-10 py-4 lg:py-20">
+        <!-- <UContainer class="grid grid-cols-1 lg:grid-cols-3 gap-10 py-4 lg:py-20">
             <FancyCard
                 v-for="(product, index) in products"
                 :key="index"
                 v-bind="product"
                 iconStyle="bg-white/60 dark:bg-white/10 rounded-full p-4"
             />
-        </UContainer>
+        </UContainer> -->
 
         <!-- Inline Component: Articles with Images with Alternate Position-->
-        <!-- <UContainer class="grid gap-16 py-4 lg:py-20">
-            <div v-for="(item, index) in items" :key="index" class="grid lg:grid-cols-2 gap-8 items-center"> -->
+        <UContainer class="grid gap-20 py-10 lg:py-20">
+            <div v-for="(item, index) in items" :key="index" class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
                 <!-- Image -->
-                <!-- <div :class="index % 2 === 1 ? 'lg:order-2' : ''" class="bg-gray-100 dark:bg-gray-800 rounded-xl min-h-80"> -->
-                    <!-- <img :src="item.image" :alt="item.title" class="w-full rounded-xl shadow-md" /> -->
-                <!-- </div> -->
+                <div :class="index % 2 === 1 ? 'lg:order-2' : ''" class="bg-primary-200 dark:bg-primary-950 rounded-xl min-h-96">
+                    <img :src="item.image" :alt="item.title" class="w-full rounded-xl shadow-md" />
+                </div>
 
                 <!-- Article -->
-                <!-- <div :class="index % 2 === 1 ? 'lg:order-1' : ''">
+                <div :class="index % 2 === 1 ? 'lg:order-1' : ''" class="space-y-8" >
                     <Article :title="item.title" :paragraphs="item.paragraphs" size="text-2xl" hasDivider />
-                </div> -->
-            <!-- </div> -->
-        <!-- </UContainer> -->
+                    <UButtonGroup size="lg" orientation="horizontal">
+                        <UButton label="Talk to our expert" color="white" />
+                        <UButton label="Learn about the product" color="gray" />
+                    </UButtonGroup>
+                </div>
+            </div>
+        </UContainer>
         
     </AppSection>
     <AppSection>
@@ -49,7 +53,7 @@
 </template>
 
 <script setup lang="ts">
-import { banner, products } from '@/data/solutions'
+import { banner, products, items } from '@/data/solutions'
 
 // const products = [
 //     {

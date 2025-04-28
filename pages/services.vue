@@ -14,11 +14,16 @@
     </AppBanner>
     <AppSection>
         <UContainer class="grid grid-cols-1 lg:grid-cols-3 gap-y-10 gap-x-20 py-4 lg:py-20">
-            <Feature 
+            <!-- <Feature 
                 v-for="(feature, index) in items" 
                 :key="index" 
                 v-bind="feature"
                 :class="index === items.length - 1 ? 'lg:col-start-2' : ''"
+            /> -->
+            <Feature 
+                v-for="(feature, index) in items" 
+                :key="index" 
+                v-bind="feature"
             />
         </UContainer>
     </AppSection>
