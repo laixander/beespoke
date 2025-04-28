@@ -5,7 +5,7 @@
         ? iconStyle
         : [
             'inline-block',
-            !unstyled && 'p-4 bg-gradient-to-t from-primary-600 to-primary-400 rounded-full',
+            !unstyled && 'p-3 lg:p-4 bg-gradient-to-t from-primary-600 to-primary-400 rounded-full',
             iconStyle
           ]"
     >
@@ -13,7 +13,7 @@
         :name="icon"
         :class="[
           'flex',
-          iconSize || 'w-6 h-6',
+          iconSize || 'w-4 h-4 lg:w-6 lg:h-6',
           iconColor
             ? iconColor
             : iconStyle

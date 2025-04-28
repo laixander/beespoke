@@ -25,8 +25,8 @@ export const links = [
         to: '/services'
     }, 
     {
-        label: 'Products',
-        to: '/products'
+        label: 'Solutions',
+        to: '/solutions'
     }, 
     {
         label: 'Technologies',

@@ -29,7 +29,7 @@ const props = defineProps<{
 }>()
 
 const footerConfig = computed(() => {
-  const base = 'py-4 lg:py-20'
+  const base = 'py-10 lg:py-20'
   const gradient = 'bg-gradient-to-t from-primary-100 to-white dark:from-primary-950'
   return props.gradient ? `${base} ${gradient}` : base
 })

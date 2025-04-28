@@ -1,6 +1,6 @@
 <template>
-    <h3 v-if="title" :class="[
-        'font-semibold text-gray-800 dark:text-gray-100 lg:mb-6',
+    <h2 v-if="title" :class="[
+        'font-bold text-gray-800 dark:text-gray-100 mb-6 lg:mb-8',
         sizeClass,
         alignClass
     ]">
@@ -15,7 +15,7 @@
         <template v-else>
             {{ title }}
         </template>
-    </h3>
+    </h2>
 </template>
 
 <script setup lang="ts">
@@ -55,7 +55,7 @@ const alignClass = computed(() => {
     }
 })
 
-const sizeClass = computed(() => props.size ?? 'text-4xl')
+const sizeClass = computed(() => props.size ?? 'text-2xl lg:text-4xl')
 </script>
 
 <style scoped>
