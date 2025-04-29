@@ -28,7 +28,11 @@
                 <!-- Article -->
                 <div :class="index % 2 === 1 ? 'lg:order-1' : ''" class="space-y-8" >
                     <Article :title="item.title" :paragraphs="item.paragraphs" size="text-2xl" hasDivider />
-                    <UButton label="Talk to our expert" color="white" size="xl" :ui="{ rounded: 'rounded-full', padding: { xl: 'px-6' } }" />
+                    <UButton label="Talk to our expert" color="white" size="xl" :ui="{ rounded: 'rounded-full', padding: { xl: 'px-6' } }">
+                        <template #trailing>
+                            <UIcon name="i-heroicons-arrow-right-20-solid" class="w-5 h-5" />
+                        </template>
+                    </UButton>
                 </div>
             </div>
         </UContainer>

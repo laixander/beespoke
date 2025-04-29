@@ -32,10 +32,10 @@ export const links = [
         label: 'Technologies',
         to: '/technologies'
     }, 
-    // {
-    //     label: 'Projects',
-    //     to: '/projects'
-    // },
+    {
+        label: 'Projects',
+        to: '/projects'
+    },
     {
         label: 'Contact',
         to: '/contact'

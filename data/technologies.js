@@ -1,6 +1,6 @@
 export const banner = [
     {
-        title: 'Our Technology Stack',
+        title: 'Our Technology',
         highlight: 'Our',
         paragraphs: [
             '**At Beespoke Solutions Inc.**, we harness modern web frameworks, container orchestration tools, and cloud-native databases to build reliable and scalable digital solutions. Our development approach emphasizes performance, flexibility, and long-term maintainability—ensuring your systems are ready for the demands of today and the innovations of tomorrow.'

@@ -15,9 +15,27 @@
                     <div class="bg-primary-50 dark:bg-primary-950/50">
                         <FancyHeading title="Contact Information" size="text-xl" margin="mb-6" />
                         <ul class="space-y-1.5">
-                            <li><UButton label="(632) 8538-5056" icon="i-lucide-phone" variant="link" size="xl" :padded="false" /></li>
-                            <li><UButton label="admin@beespokedev.com" icon="i-lucide-mail" variant="link" size="xl" :padded="false" /></li>
-                            <li><UButton label="Live Chat Available" icon="i-lucide-message-square" variant="link" size="xl" :padded="false" /></li>
+                            <li>
+                                <UButton label="(632) 8538-5056" variant="link" size="xl" :padded="false">
+                                    <template #leading>
+                                        <UIcon name="i-lucide-phone" class="w-5 h-5" />
+                                    </template>
+                                </UButton>
+                            </li>
+                            <li>
+                                <UButton label="admin@beespokedev.com" variant="link" size="xl" :padded="false">
+                                    <template #leading>
+                                        <UIcon name="i-lucide-mail" class="w-5 h-5" />
+                                    </template>
+                                </UButton>
+                            </li>
+                            <li>
+                                <UButton label="Live Chat Available" variant="link" size="xl" :padded="false">
+                                    <template #leading>
+                                        <UIcon name="i-lucide-message-square" class="w-5 h-5" />
+                                    </template>
+                                </UButton>
+                            </li>
                         </ul>
                     </div>
                     <div class="bg-gray-50 dark:bg-gray-900">
