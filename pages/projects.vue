@@ -12,7 +12,13 @@
          <UContainer class="py-10 lg:py-20">
             <UTabs :items="items" :ui="uiTabsConfig">
                 <template #client>
-                    Client Projects
+                    <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
+                        <FancyCard 
+                            v-for="(card, i) in cards"
+                            :key="i"
+                            v-bind="card"
+                        />
+                    </div>
                 </template>
                 <template #internal>
                     Internal Projects
@@ -60,4 +66,55 @@ const uiTabsConfig = {
         }
     }
 }
+
+// const cards = [
+//   {
+//     image: '/bnr-propertytax.jpg',
+//     tag: 'Dolores',
+//     title: 'SmartJuan24',
+//     description: 'Simplified public service platform built for accessibility and transparency.',
+//     buttons: [
+//       { label: 'Learn More', to: '/smartjuan' },
+//       { label: 'Get Started', to: '/register' }
+//     ]
+//   },
+//   {
+//     title: 'Paperless Permits',
+//     description: 'Apply for business permits online, fast and secure.',
+//     buttons: [{ label: 'Apply Now', to: '/permits' }]
+//   }
+// ]
+
+const cards = [
+  {
+    image: '/bnr-propertytax.jpg',
+    tag: 'Dolores',
+    title: 'SmartJuan24',
+    description: 'Simplified public service platform built for accessibility and transparency.',
+    buttons: [
+      { label: 'Learn More', to: '/smartjuan' },
+      { label: 'Get Started', to: '/register' }
+    ]
+  },
+  {
+    image: '/bnr-propertytax.jpg',
+    tag: 'Dolores',
+    title: 'SmartJuan24',
+    description: 'Simplified public service platform built for accessibility and transparency.',
+    buttons: [
+      { label: 'Learn More', to: '/smartjuan' },
+      { label: 'Get Started', to: '/register' }
+    ]
+  },
+  {
+    image: '/bnr-propertytax.jpg',
+    tag: 'Dolores',
+    title: 'SmartJuan24',
+    description: 'Simplified public service platform built for accessibility and transparency.',
+    buttons: [
+      { label: 'Learn More', to: '/smartjuan' },
+      { label: 'Get Started', to: '/register' }
+    ]
+  },
+]
 </script>

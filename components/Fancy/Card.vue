@@ -1,53 +1,81 @@
-<template>
-    <UCard :ui="{
-        base: 'overflow-hidden',
-        header: { base: `flex items-center gap-4 ${headerAlign}`, background: headerBackground, padding: 'px-4 py-2 sm:px-6 sm:py-4' },
-        footer: { base: 'border-none' }
-    }">
+<!-- <template>
+    <UCard :ui="{ base: 'overflow-hidden', header: { padding: '' }, footer: { base: 'grid grid-cols-2 divide-x', padding: '' } }">
         <template #header>
-            <FancyIcon v-if="icon || img" :icon="icon" :img="img" :imgAlt="imgAlt" :iconStyle="iconStyle"
-                :iconColor="iconColor" :iconSize="iconSize" />
-            <h3 class="font-bold leading-tight lg:leading-snug lg:text-lg text-gray-800 dark:text-gray-100">
-                {{ title }}
-            </h3>
+            <img src="/bnr-propertytax.jpg" alt="" class="object-cover object-center w-full h-48">
         </template>
-        <slot>
-            <Markdown :text="description" :class="descriptionAlignClass" />
-        </slot>
-        <template v-if="buttonLabel" #footer>
-            <UButton :label="buttonLabel" size="xl" block />
+        <div class="space-y-1 mb-4">
+            <div class="flex items-center gap-2">
+                <UIcon name="i-lucide-inbox" class="w-5 h-5 text-primary" /> <span class="font-light text-sm text-gray-500 dark:text-gray-400">Dolores</span>
+            </div>
+            <h3 class="font-semibold text-xl text-gray-800 dark:text-gray-100">
+                SmartJuan24
+            </h3>
+        </div>
+        
+        <p class="font-light text-gray-500 dark:text-gray-400 leading-6">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illo dolorum soluta quos voluptas iusto perferendis ad error neque tempora mollitia?
+        </p>
+        <template #footer>
+            <UButton label="Learn More" size="xl" variant="ghost" color="gray" :ui="{ base: 'justify-center h-14', rounded: 'rounded-none' }" />
+            <UButton label="Learn More" size="xl" variant="ghost" color="gray" :ui="{ base: 'justify-center h-14', rounded: 'rounded-none' }" />
         </template>
     </UCard>
-</template>
+</template> -->
 
-<script setup lang="ts">
-const props = defineProps<{
-    title: string
-    description: string
-    icon?: string
-    iconColor?: string
-    iconStyle?: string
-    iconSize?: string
-    img?: string
-    imgAlt?: string
-    buttonLabel?: string
-    align?: 'left' | 'center' | 'right'
-    headerBackground?: string
-}>()
-
-const headerAlign = computed(() => {
-    return props.align === 'center'
-        ? 'justify-center text-center'
-        : props.align === 'right'
-            ? 'justify-end text-right'
-            : 'justify-start text-left'
-})
-
-const descriptionAlignClass = computed(() => {
-    return props.align === 'center'
-        ? 'text-center'
-        : props.align === 'right'
-            ? 'text-right'
-            : 'text-left'
-})
-</script>
+<template>
+    <UCard
+      :ui="{
+        base: 'flex flex-col overflow-hidden',
+        header: { padding: '' },
+        body: { base: 'flex-1' },
+        footer: { base: 'grid grid-flow-col divide-x dark:divide-gray-800', padding: '' }
+      }"
+    >
+      <!-- Header Image -->
+      <template v-if="image" #header>
+        <img :src="image" :alt="title" class="object-cover object-center w-full h-48" />
+      </template>
+  
+      <div class="space-y-1 mb-4" v-if="tag || title">
+        <!-- Tag -->
+        <div v-if="tag" class="flex items-center gap-2">
+          <UIcon name="i-lucide-inbox" class="w-5 h-5 text-primary" />
+          <span class="font-light text-sm text-gray-500 dark:text-gray-400">{{ tag }}</span>
+        </div>
+  
+        <!-- Title -->
+        <h3 v-if="title" class="font-semibold text-xl text-gray-800 dark:text-gray-100">
+          {{ title }}
+        </h3>
+      </div>
+  
+      <!-- Description -->
+      <p v-if="description" class="font-light text-gray-500 dark:text-gray-400 leading-6">
+        {{ description }}
+      </p>
+  
+      <!-- Footer Buttons -->
+      <template v-if="buttons?.length" #footer>
+        <UButton
+          v-for="(btn, index) in buttons.slice(0, 2)"
+          :key="index"
+          :label="btn.label"
+          :to="btn.to"
+          size="xl"
+          variant="ghost"
+          color="gray"
+          :ui="{ base: 'justify-center h-14', rounded: 'rounded-none' }"
+        />
+      </template>
+    </UCard>
+  </template>
+  
+  <script setup lang="ts">
+  const props = defineProps<{
+    image?: string
+    tag?: string
+    title?: string
+    description?: string
+    buttons?: { label: string; to?: string }[]
+  }>()
+  </script>
