@@ -18,7 +18,7 @@
             </div>
         </UContainer>
         <UContainer>
-            <div class="mt-10 pt-4 border-t border-gray-200 dark:border-white/5 text-center">
+            <div class="mt-10 pt-4 border-t border-gray-200 dark:border-white/10 text-center">
                 <span class="font-light text-sm text-gray-500">&copy;2025 <span class="text-primary-500">Beespoke Solutions Inc.</span> Made by Human</span>
             </div>
         </UContainer>
@@ -45,7 +45,7 @@ const uiContainerConfig = {
 }
 
 const uiNavConfig = {
-    wrapper: 'border-s border-gray-200 dark:border-white/5',
+    wrapper: 'border-s border-gray-200 dark:border-white/10',
     base: 'group flex border-s -ms-px leading-8 before:hidden',
     padding: 'p-0 ps-4',
     rounded: '',

@@ -14,25 +14,41 @@
                 <template #client>
                     <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
                         <FancyCard 
-                            v-for="(card, i) in cards"
+                            v-for="(card, i) in clients"
                             :key="i"
                             v-bind="card"
                         />
                     </div>
                 </template>
                 <template #internal>
-                    Internal Projects
+                  <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
+                        <FancyCard 
+                            v-for="(card, i) in internals"
+                            :key="i"
+                            v-bind="card"
+                        />
+                    </div>
                 </template>
             </UTabs>
          </UContainer>
     </AppSection>
     <AppSection>
-        <AppHighlights />
+      <UContainer class="text-center py-10 lg:py-20">
+            <FancyHeading 
+                title="Ready to start your next project?"
+                size="text-3xl"
+            />
+            <FancyDivider align="center" />
+            <p class="prose mx-auto dark:text-gray-400 mb-8">
+              Let's work together to bring your vision to life with innovative technology solutions designed for your specific needs.
+            </p>
+            <UButton label="Start a Project" size="xl" :ui="{ rounded: 'rounded-full', padding: { xl: 'px-6' } }" />
+        </UContainer>
     </AppSection>
 </template>
 
 <script setup lang="ts">
-import { banner } from '@/data/projects'
+import { banner, clients, internals } from '@/data/projects'
 
 const items = [{
   slot: 'client',
@@ -45,7 +61,7 @@ const items = [{
 }]
 
 const uiTabsConfig = {
-    wrapper: 'space-y-8 flex flex-col justify-center w-full',
+    wrapper: 'space-y-10 flex flex-col justify-center w-full',
     list: { 
         base: 'mx-auto',
         rounded: 'rounded-full',
@@ -84,37 +100,4 @@ const uiTabsConfig = {
 //     buttons: [{ label: 'Apply Now', to: '/permits' }]
 //   }
 // ]
-
-const cards = [
-  {
-    image: '/bnr-propertytax.jpg',
-    tag: 'Dolores',
-    title: 'SmartJuan24',
-    description: 'Simplified public service platform built for accessibility and transparency.',
-    buttons: [
-      { label: 'Learn More', to: '/smartjuan' },
-      { label: 'Get Started', to: '/register' }
-    ]
-  },
-  {
-    image: '/bnr-propertytax.jpg',
-    tag: 'Dolores',
-    title: 'SmartJuan24',
-    description: 'Simplified public service platform built for accessibility and transparency.',
-    buttons: [
-      { label: 'Learn More', to: '/smartjuan' },
-      { label: 'Get Started', to: '/register' }
-    ]
-  },
-  {
-    image: '/bnr-propertytax.jpg',
-    tag: 'Dolores',
-    title: 'SmartJuan24',
-    description: 'Simplified public service platform built for accessibility and transparency.',
-    buttons: [
-      { label: 'Learn More', to: '/smartjuan' },
-      { label: 'Get Started', to: '/register' }
-    ]
-  },
-]
 </script>

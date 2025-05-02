@@ -44,6 +44,6 @@
         loadFailed.value = true;
         isLoading.value = false;
       }
-    }, 5000); // Adjust timeout as needed
+    }, 10000); // Adjust timeout as needed
   });
   </script>
