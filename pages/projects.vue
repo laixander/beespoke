@@ -11,19 +11,19 @@
         <!-- <ComingSoon /> -->
          <UContainer class="py-10 lg:py-20">
             <UTabs :items="items" :ui="uiTabsConfig">
-                <template #client>
-                    <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
+                <template #projects>
+                  <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
                         <FancyCard 
-                            v-for="(card, i) in clients"
+                            v-for="(card, i) in projects"
                             :key="i"
                             v-bind="card"
                         />
                     </div>
                 </template>
-                <template #internal>
-                  <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
+                <template #clients>
+                    <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
                         <FancyCard 
-                            v-for="(card, i) in internals"
+                            v-for="(card, i) in clients"
                             :key="i"
                             v-bind="card"
                         />
@@ -48,17 +48,20 @@
 </template>
 
 <script setup lang="ts">
-import { banner, clients, internals } from '@/data/projects'
+import { banner, clients, projects } from '@/data/projects'
 
-const items = [{
-  slot: 'client',
-  label: 'Client Projects',
-  icon: 'i-lucide-user-round'
-}, {
-  slot: 'internal',
-  label: 'Internal Projects',
-  icon: 'i-lucide-building-2'
-}]
+const items = [
+    {
+        slot: 'projects',
+        label: 'Projects',
+        icon: 'i-lucide-cpu'
+    },
+    {
+        slot: 'clients',
+        label: 'Clients',
+        icon: 'i-lucide-user-round'
+    }
+]
 
 const uiTabsConfig = {
     wrapper: 'space-y-10 flex flex-col justify-center w-full',

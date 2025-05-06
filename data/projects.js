@@ -8,6 +8,51 @@ export const banner = [
     },
 ]
 
+
+
+export const projects = [
+    {
+        image: '/logo-gorice.png',
+        tag: 'GoRice',
+        title: 'GoRice',
+        description: 'Simplified public service platform built for accessibility and transparency.',
+        buttons: [
+            { label: 'Learn More', to: '/smartjuan' },
+            { label: 'Get Started', to: '/register' }
+        ]
+    },
+    {
+        image: '/logo-chizmis.png',
+        tag: 'Chizmis',
+        title: 'Chizmis',
+        description: 'Simplified public service platform built for accessibility and transparency.',
+        buttons: [
+            { label: 'Learn More', to: '/smartjuan' },
+            { label: 'Get Started', to: '/register' }
+        ]
+    },
+    {
+        image: '/logo-fast.png',
+        tag: 'Fast Logistics',
+        title: 'HRIS - Fast Logistics',
+        description: 'Simplified public service platform built for accessibility and transparency.',
+        buttons: [
+            { label: 'Learn More', to: '/smartjuan' },
+            { label: 'Get Started', to: '/register' }
+        ]
+    },
+    {
+        image: '/logo-starhorse.png',
+        tag: 'Starhorse',
+        title: 'Starhorse',
+        description: 'Simplified public service platform built for accessibility and transparency.',
+        buttons: [
+            { label: 'Learn More', to: '/smartjuan' },
+            { label: 'Get Started', to: '/register' }
+        ]
+    }
+]
+
 export const clients = [
     {
         image: '/bnr-propertytax.jpg',
@@ -59,47 +104,4 @@ export const clients = [
             { label: 'Get Started', to: '/register' }
         ]
     },
-]
-
-export const internals = [
-    {
-        image: '/logo-gorice.png',
-        tag: 'GoRice',
-        title: 'GoRice',
-        description: 'Simplified public service platform built for accessibility and transparency.',
-        buttons: [
-            { label: 'Learn More', to: '/smartjuan' },
-            { label: 'Get Started', to: '/register' }
-        ]
-    },
-    {
-        image: '/logo-chizmis.png',
-        tag: 'Chizmis',
-        title: 'Chizmis',
-        description: 'Simplified public service platform built for accessibility and transparency.',
-        buttons: [
-            { label: 'Learn More', to: '/smartjuan' },
-            { label: 'Get Started', to: '/register' }
-        ]
-    },
-    {
-        image: '/logo-fast.png',
-        tag: 'Fast Logistics',
-        title: 'HRIS - Fast Logistics',
-        description: 'Simplified public service platform built for accessibility and transparency.',
-        buttons: [
-            { label: 'Learn More', to: '/smartjuan' },
-            { label: 'Get Started', to: '/register' }
-        ]
-    },
-    {
-        image: '/logo-starhorse.png',
-        tag: 'Starhorse',
-        title: 'Starhorse',
-        description: 'Simplified public service platform built for accessibility and transparency.',
-        buttons: [
-            { label: 'Learn More', to: '/smartjuan' },
-            { label: 'Get Started', to: '/register' }
-        ]
-    }
 ]

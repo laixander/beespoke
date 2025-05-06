@@ -8,13 +8,13 @@
         </UContainer>
     </AppBanner>
     <AppSection>
-        <UContainer class="grid grid-cols-1 lg:grid-cols-3 gap-10 py-10 lg:py-20">
+        <UContainer class="grid grid-cols-1 lg:grid-cols-3 gap-10 lg:gap-20 py-10 lg:py-20">
             <Feature 
                 v-for="(feature, index) in items" 
                 :key="index" 
                 v-bind="feature"
                 unstyled
-                iconSize="w-14 h-14"
+                iconSize="w-12 h-12"
             />
         </UContainer>
     </AppSection>

@@ -48,6 +48,96 @@ export const items = [
         icon: 'i-logos-yugabyte-icon',
         title: 'YugabyteDB',
         description: 'Distributed SQL database for global applications. YugabyteDB combines the familiarity of SQL with the scalability of NoSQL. We use it for mission-critical, cloud-native systems that demand resilience and real-time performance.'
+    },
+    {
+        icon: 'i-logos-swift',
+        title: 'Swift',
+        description: 'Modern programming language for iOS and macOS development. Swift enables us to build fast, safe, and interactive native apps for Apple platforms with seamless performance and elegant user interfaces.'
+    },
+    {
+        icon: 'i-logos-flutter',
+        title: 'Flutter',
+        description: 'Cross-platform UI toolkit from Google. Flutter allows us to build beautiful, high-performance apps for iOS, Android, and web from a single codebase, accelerating development and ensuring a consistent user experience.'
+    },
+    {
+        icon: 'i-logos-kotlin-icon',
+        title: 'Kotlin',
+        description: 'Concise and modern language for Android development. Kotlin enhances productivity and code safety, enabling us to build reliable and efficient native Android apps with a streamlined developer experience.'
+    },
+    {
+        icon: 'i-logos-supabase-icon',
+        title: 'Supabase',
+        description: 'Open-source Firebase alternative built on PostgreSQL. Supabase enables us to quickly build scalable, real-time apps with authentication, storage, and APIs—without managing backend infrastructure.'
+    },
+    {
+        icon: 'i-logos-supabase-icon',
+        title: 'Supabase',
+        description: 'Open-source Firebase alternative built on PostgreSQL. Supabase offers real-time data, authentication, and edge functions, making it a powerful backend-as-a-service for modern applications.'
+    },
+    {
+        icon: 'i-logos-grafana',
+        title: 'Grafana',
+        description: 'Visualization and observability platform for monitoring metrics and logs. Grafana enables us to build rich dashboards for real-time system insights and performance tracking.'
+    },
+    {
+        icon: 'i-logos-kong-icon',
+        title: 'Kong',
+        description: 'Cloud-native API gateway and service mesh. We use Kong to secure, manage, and scale APIs with high performance, flexible plugins, and enterprise-grade traffic control.'
+    },
+    {
+        icon: 'i-logos-kafka-icon',
+        title: 'Kafka',
+        description: 'Distributed event streaming platform for high-throughput data pipelines. Kafka powers real-time data flows between services, ideal for analytics, logs, and asynchronous communication.'
+    },
+    {
+        icon: 'i-logos-terraform-icon',
+        title: 'Terraform',
+        description: 'Infrastructure as Code (IaC) tool for cloud provisioning. We use Terraform to define and manage infrastructure declaratively, enabling repeatable and scalable cloud setups.'
+    },
+    {
+        icon: 'i-logos-metabase',
+        title: 'Metabase',
+        description: 'Open-source business intelligence platform. Metabase allows teams to explore data visually, build dashboards, and generate insights without writing SQL.'
+    },
+    {
+        icon: 'i-logos-apache-superset-icon',
+        title: 'Superset',
+        description: 'Data exploration and visualization tool. Superset supports advanced analytics, interactive dashboards, and supports a wide range of SQL-speaking data sources.'
+    },
+    {
+        icon: 'i-simple-icons-minio',
+        title: 'MinIO',
+        description: 'High-performance object storage compatible with S3. MinIO is our go-to solution for storing large amounts of unstructured data securely and efficiently.'
+    },
+    {
+        icon: 'i-simple-icons-n8n',
+        title: 'n8n',
+        description: 'Workflow automation tool for connecting APIs and services. We use n8n to build custom automations with low code, enhancing productivity and system integration.'
+    },
+    {
+        icon: 'i-logos-digital-ocean-icon',
+        title: 'DigitalOcean',
+        description: 'Developer-friendly cloud platform. DigitalOcean provides scalable compute, storage, and networking infrastructure ideal for startups and growing applications.'
+    },
+    {
+        icon: 'i-logos-gitlab',
+        title: 'GitLab',
+        description: 'DevOps platform for modern software development. We use GitLab to streamline our CI/CD workflows, manage repositories, and collaborate efficiently from planning to deployment.'
+    },
+    {
+        icon: 'i-logos-github-icon',
+        title: 'GitHub',
+        description: 'Popular code hosting platform for open-source and enterprise projects. GitHub enables us to manage code, track issues, and collaborate seamlessly across teams using pull requests and actions.'
+    },
+    {
+        icon: 'i-logos-npm',
+        title: 'npm',
+        description: 'Package manager for JavaScript and Node.js. npm allows us to manage dependencies, publish reusable code, and maintain consistent development environments across projects.'
+    },
+    {
+        icon: 'i-logos-git-icon',
+        title: 'Git',
+        description: 'Distributed version control system. Git helps us track changes, collaborate on code, and maintain a clean and reliable development history across all our projects.'
     }
 ]
 
