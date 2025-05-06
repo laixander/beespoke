@@ -39,7 +39,7 @@
       <div class="space-y-1 mb-4" v-if="tag || title">
         <!-- Tag -->
         <div v-if="tag" class="flex items-center gap-2">
-          <UIcon name="i-lucide-inbox" class="w-5 h-5 text-primary" />
+          <UIcon :name="icon || 'i-lucide-tag'" class="w-5 h-5 text-primary" />
           <span class="font-light text-sm text-gray-500 dark:text-gray-400">{{ tag }}</span>
         </div>
   
@@ -73,6 +73,7 @@
   <script setup lang="ts">
   const props = defineProps<{
     image?: string
+    icon?: string
     tag?: string
     title?: string
     description?: string

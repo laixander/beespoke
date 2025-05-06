@@ -50,10 +50,7 @@ export const projects = [
             { label: 'Learn More', to: '/smartjuan' },
             { label: 'Get Started', to: '/register' }
         ]
-    }
-]
-
-export const clients = [
+    },
     {
         image: '/bnr-propertytax.jpg',
         tag: 'Dolores',
@@ -105,3 +102,5 @@ export const clients = [
         ]
     },
 ]
+
+export const clients = []

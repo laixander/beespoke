@@ -17,6 +17,7 @@
                             v-for="(card, i) in projects"
                             :key="i"
                             v-bind="card"
+                            icon="i-lucide-building-2"
                         />
                     </div>
                 </template>
