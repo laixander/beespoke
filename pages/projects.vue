@@ -55,12 +55,12 @@ const items = [
     {
         slot: 'projects',
         label: 'Projects',
-        icon: 'i-lucide-cpu'
+        icon: 'i-lucide-package-2'
     },
     {
         slot: 'clients',
         label: 'Clients',
-        icon: 'i-lucide-user-round'
+        icon: 'i-lucide-user-round-check'
     }
 ]
 

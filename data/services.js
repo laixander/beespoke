@@ -15,7 +15,7 @@ export const items = [
         description: 'We provide strategic IT consulting to help businesses modernize infrastructure, manage risks, and drive innovation. Our experts guide you in building a scalable, secure, and future-ready tech environment.'
     },
     {
-        icon: 'i-lucide-cpu',
+        icon: 'i-lucide-panels-top-left',
         title: 'Application Development',
         description: 'We design and develop custom applications that streamline operations, enhance user experiences, and support your business goals across digital platforms.'
     },
@@ -25,7 +25,7 @@ export const items = [
         description: 'Our QA team ensures your software meets high standards of quality and performance—minimizing bugs, reducing risk, and securing system stability.'
     },
     {
-        icon: 'i-lucide-tablet-smartphone',
+        icon: 'i-lucide-smartphone',
         title: 'Mobile Application Development',
         description: 'We build responsive, user-focused mobile apps that increase customer engagement, extend your brand reach, and support on-the-go access.'
     },

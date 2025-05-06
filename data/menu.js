@@ -21,7 +21,7 @@ export const links = [
     },
     {
         label: 'Projects',
-        icon: 'i-lucide-cpu',
+        icon: 'i-lucide-package-2',
         to: '/projects'
     },
     {

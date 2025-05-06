@@ -125,7 +125,7 @@ export const items = [
         description: 'DevOps platform for modern software development. We use GitLab to streamline our CI/CD workflows, manage repositories, and collaborate efficiently from planning to deployment.'
     },
     {
-        icon: 'i-logos-github-icon',
+        icon: 'i-simple-icons-github',
         title: 'GitHub',
         description: 'Popular code hosting platform for open-source and enterprise projects. GitHub enables us to manage code, track issues, and collaborate seamlessly across teams using pull requests and actions.'
     },
